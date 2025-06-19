@@ -1,0 +1,797 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root{
+  --white-color: white;
+  --black-color: black;
+  --navbg-color: rgb(31, 31, 31);
+  --navitembg-color: rgb(20, 20, 20);
+  --solid-button: #0071e3;
+}
+
+html{
+  font-size: 67%;
+}
+
+body{
+  font-family: sans-serif;
+}
+
+.hidden{
+  display: none;
+  position: absolute;
+  visibility: hidden;
+  overflow: hidden;
+  width: 1px;
+  height: 1px;
+  clip: rect(0, 0, 0, 0);
+  opacity: 0;
+}
+
+#my-head a{
+  color: var(--white-color);
+  text-decoration: none;
+}
+.nav-lists li{
+  list-style-type: none;
+}
+#my-head{
+  background-color: var(--navbg-color);
+  color: var(--white-color);
+  opacity: 0.97;
+  position: fixed;
+  width: 100%;
+  height: 50px;
+}
+.nav-bar{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 93%;
+  margin: 0px auto;
+  height: inherit;
+}
+.nav-bar img{
+  height: 20px;
+}
+.nav-apple-logo img, .nav-close img{
+  height: 27px;
+}
+.nav-right-buttons{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 110px;
+}
+.nav-menu-list{
+  background-color: var(--navitembg-color);
+  position: absolute;
+  top: 0px;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+.nav-close{
+  position: relative;
+  width: fit-content;
+  left: 91%;
+  top: 12px;
+}
+.nav-menu:hover, .nav-close:hover{
+  cursor: pointer;
+}
+.nav-lists{
+  font-size: 2.6rem;
+  line-height: 50px;
+  margin-top: 30px;
+  margin-left: 40px;
+  font-weight: bolder;
+}
+.nav-dropdown{
+  animation: dropdown 200ms ease-in-out;
+}
+@keyframes dropdown{
+  0%{
+    height: 10vh;
+  }
+  25%{
+    height: 25vh;
+  }
+  50%{
+    height: 50vh;
+  }
+  75%{
+    height: 75vh;
+  }
+  100%{
+    height: 100vh;
+  }
+}
+
+
+
+
+#my-main{
+  display: flex;
+  flex-direction: column;
+  row-gap: 15px;
+}
+.macbook-pro{
+  padding: 90px 0 30px;
+  background-color: var(--black-color);
+  color: var(--white-color);
+}
+.above-title{
+  margin: 0 auto;
+  width: fit-content;
+  text-align: center;
+}
+.above-title h2{
+  font-size: 2.8rem;
+}
+.above-title p{
+  font-size: 1.8rem;
+  margin: 5px 0 15px;
+}
+.above-buttons{
+  margin: 0 auto;
+  width: fit-content;
+  display: flex;
+}
+.above-buttons :first-child{
+  background-color: var(--solid-button);
+  border: none;
+  color: var(--white-color);
+  font-size: 1.4rem;
+  padding: 8px 15px;
+  border-radius: 30px;
+  margin-right: 10px;
+}
+.above-buttons :last-child{
+  background-color: transparent;
+  border: 1.3px solid;
+  color: var(--solid-button);
+  font-size: 1.4rem;
+  padding: 8px 15px;
+  border-radius: 30px;
+  margin-left: 10px;
+}
+.above-buttons :first-child:hover, .above-buttons :last-child:hover{
+  cursor: pointer;
+}
+
+.mbpro-pic img{
+  width: 60%;
+  object-fit:contain;
+  display: block;
+  margin: 60px auto 40px;
+}
+.last-message{
+  margin: 0 auto;
+  font-size: 1.4rem;
+  width: fit-content;
+  background-image: linear-gradient(50deg,#0c77e1,#ce56c8,#ec5007);
+  background-clip: text;
+  color: transparent;
+}
+
+
+.macbook-air{
+  background: linear-gradient(to bottom,rgb(213, 235, 246),rgb(234, 243, 248),rgb(249, 249, 249));
+  padding: 50px 0 20px;
+}
+.mbair-above-title p:first-of-type{
+  margin-bottom: 0px;
+}
+.mbair-above-title p:last-of-type{
+  margin-bottom: 20px;
+}
+.mbair-pic img{
+  width: 70%;
+  display: block;
+  margin: 30px auto 25px;
+}
+
+
+.ipad-air{
+  background: linear-gradient(to bottom,rgb(173, 220, 238),rgb(196, 228, 241),rgb(241, 245, 246));
+  padding: 50px 0 25px;
+}
+.pdair-above-title h2{
+  font-size: 3.7rem;
+}
+.pdair-above-title h2 span{
+  font-family: "Pacifico", cursive;
+  letter-spacing: 3px;
+  background-image: linear-gradient(130deg, #0e67ba 50%,#5098d1 70%);
+  background-clip: text;
+  color: transparent;
+}
+.pdair-pic img{
+  width: 50%;
+  display: block;
+  margin: 30px auto 25px;
+}
+
+
+.iphone-16-pro{
+  background-color: black;
+  color: white;
+  padding: 50px 0 25px;
+}
+.phpro-pic img{
+  width: 80%;
+  display: block;
+  margin: 0 auto 40px;
+  padding: 30px 0;
+}
+.phpro-pic{
+ background: radial-gradient(#bf9b8a 20%,#956657 40%,#321b15 80%,var(--black-color));
+}
+
+
+.iphone-16{
+  background: linear-gradient(to bottom,#0d1249,#4855a2,#d8e2fb);
+  padding: 50px 0 25px;
+  color: white;
+}
+.ph-above-buttons :first-child{
+  background-color: var(--white-color);
+  color: #0d1249;
+}
+.ph-above-buttons :last-child{
+  color: var(--white-color);
+}
+.ph-pic img{
+  height: 300px;
+  display: block;
+  margin: 35px auto 20px;
+}
+
+
+.watch, .card{
+  background-color: #f5f5f7;
+  padding: 50px 0 25px;
+}
+.wh-above-title h2 img, .cd-above-title h2 img{
+  height: 30px;
+}
+.wh-above-title p:first-of-type{
+  font-size: 1.2rem;
+  margin-bottom: 0;
+}
+.wh-above-title p:last-of-type{
+  margin: 15px 0 20px;
+}
+.wh-pic img, .td-pic img, .op-pic img, .cd-pic img{
+  width: 100%;
+  display: block;
+  margin: 35px auto 20px;
+}
+
+
+.other-products{
+  background-color: #f5f5f7;
+  padding: 50px 0 25px;
+}
+.op-above-buttons button{
+  background-color: var(--solid-button);
+  border: none;
+  color: var(--white-color);
+  font-size: 1.4rem;
+  padding: 8px 15px;
+  border-radius: 30px;
+  width: fit-content;
+  display: block;
+  margin: 0 auto;
+}
+
+
+
+
+.trading{
+  background: linear-gradient(140deg, #f5f5f7 69%, #b6b6b8 85%);
+  padding: 50px 0 25px;
+}
+.td-above-title h2 img{
+  height: 26px;
+}
+.td-above-title p, .cd-above-title p{
+  width: 85%;
+  margin: 10px auto 15px;
+}
+
+
+
+.tv-view{
+  display: flex;
+  align-items: center;
+  column-gap: 5px;
+}
+.tv-view-arrow{
+  padding: 5px;
+}
+.tv-view-arrow img{
+  height: 25px;
+  width: 20px;
+}
+.tv-view-pic{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  column-gap: 20px;
+  overflow: hidden;
+}
+.tvpic img{
+  width: 305px;
+}
+.tv-slider{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 80%;
+  margin: 7px auto 10px;
+  overflow: hidden;
+}
+.slider{
+  width: 8px;
+  height: 8px;
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 50%;
+}
+.more-stuff{
+  height: 160px;
+  margin: 0 0 20px;
+  position: relative;
+  width: 100%;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  z-index: -1;
+}
+.more-stuff-container{
+  display: flex;
+  width: calc(250px * 10);
+  animation: scroll-eff 40s linear infinite;
+}
+.more-stuff-container:hover{
+  animation-play-state: paused;
+}
+.mspic{
+  width: 250px;
+  display: flex;
+  align-items: center;
+  padding: 0 15px;
+  perspective: 100px;
+  margin: 0 5px;
+}
+.mspic p{
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+.mspic img{
+  width: 250px;
+  transition: transform 1s;
+}
+.mspic img:hover{
+  transform: translateZ(20px);
+}
+@keyframes scroll-eff{
+  0%{
+    transform: translateX(0);
+  }
+  100%{
+    transform: translateX(calc(-250px * 9));
+  }
+}
+.p-p-button{
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 23px;
+  height: 23px;
+  border-radius: 50%;
+  float: right;
+  margin: 0px 20px 5px 0px;
+}
+.p-p-button img:first-of-type{
+  margin-left: 1.5px;
+}
+.p-p-button img:last-of-type{
+  margin-left: 2.3px;
+}
+
+.tc{
+  margin: 20px auto;
+  background-color: #f5f5f7;
+  color: grey;
+  font-size: 1.12rem;
+  padding: 10px;
+}
+
+
+.other-links{
+  font-size: 1.3rem;
+  color: rgba(0, 0, 0,0.8);
+  margin: 10px 4%;
+  padding: 10px 0 5px;
+  border-top: 1px solid rgba(0, 0, 0, 0.3);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+}
+.other-links > div{
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+.other-links>div:not(:first-of-type){
+  border-top: 1.3px solid rgba(0, 0, 0, 0.5);
+}
+.ol-drop-down{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.ol-drop-down img{
+  height: 22px;
+}
+.ol-items-collection{
+  color: rgba(0, 0, 0, 0.6);
+  margin: 15px;
+  overflow: hidden;
+}
+.ol-items-collection div:not(:first-of-type){
+  margin-top: 10px;
+}
+.drop-down-items{
+  padding: 5px;
+}
+.drop-down-items:hover{
+  background-color: rgba(0, 0, 0, 0.3);
+}
+.on-dropdown-ol{
+  animation: dropdown_ol 250ms ease-in-out;
+}
+.on-rotate-ol{
+  transform: rotateX(180deg);
+}
+@keyframes dropdown_ol {
+  0%{
+    height: 10px;
+  }
+  30%{
+    height: 50px;
+  }
+  70%{
+    height: 140px;
+  }
+  100%{
+    height: fit-content;
+  }
+}
+
+.final{
+  margin: 10px 4%;
+  padding: 15px 0 10px;
+  font-size: 1.1rem;
+  line-height: 20px;
+  color: rgba(0, 0, 0,0.55);
+}
+.final p:first-of-type a{
+  color: #0c77e1;
+}
+.final p:nth-of-type(2){
+  margin: 12px 5px 12px 0;
+  width: fit-content;
+  color: rgba(0, 0, 0,0.75);
+}
+.final > div span{
+  display: block;
+  padding: 5px;
+  color: rgba(0, 0, 0,0.75);
+}
+.final > div span:not(:last-of-type){
+  display: block;
+}
+.final > div{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.thin_line{
+  width: 0.5px;
+  height: 12px;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+.thick_line{
+  width: 1.5px;
+  height: 12px;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+.final > div span:hover{
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+@media (min-width:450px) {
+  html{
+    font-size: 70%;
+  }
+  .mspic p{
+    font-size: 12px;
+  }
+  .final > div{
+    width: 65%;
+    column-gap: 2px;
+    margin-left: -5px;
+  }
+  .tv-slider{
+    width: 200px;
+  }
+  img[alt|="Products"]{
+    width: 80%;
+  }
+  img[alt|="MasterCard"]{
+    width: 90%;
+  }
+  img[alt|="iPhone16Pro"]{
+    width: 50%;
+  }
+  .mbair-pic img{
+    width: 55%;
+  }
+  .other-links{
+    margin: 10px 2%;
+  }
+  .final{
+    margin: 10px 2%;
+  }
+}
+@media (min-width: 734px){
+  html{
+    font-size: 70%;
+  }
+  .tvpic img {
+    height: 380px;
+    width: 90vw;
+    object-fit: contain;
+  }
+  .contain {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 15px;
+    width: 97%;
+    margin: 0 auto;
+  }
+  img[alt|="Products"]{
+    width: 100%;
+  }
+  img[alt|="MasterCard"]{
+    width: 100%;
+  }
+  img[alt|="iPhone16Pro"]{
+    width: 60%;
+  }
+  .macbook-air .last-message, .ipad-air .last-message, .macbook-pro .last-message{
+    font-size: 2rem;
+  }
+  .macbook-air .above-buttons :first-child, .macbook-air .above-buttons :last-child, .macbook-pro .above-buttons :first-child, .macbook-pro .above-buttons :last-child,  .ipad-air .above-buttons :first-child, .ipad-air .above-buttons :last-child{
+    font-size: 2.1rem;
+  }
+  .macbook-air .above-title p,.macbook-pro .above-title p,.ipad-air .above-title p {
+    font-size: 2.2rem;
+  }
+  .pdair-above-title h2 {
+    font-size: 6rem;
+  }
+  .macbook-air .above-title h2, .macbook-pro .above-title h2 {
+    font-size: 5rem;
+  }
+  .pdair-pic img{
+    width: 60%;
+  }
+  .mbair-pic img {
+    width: 70%;
+    height: 350px;
+  }
+  .mbpro-pic img {
+    width: 90%;
+    height: 250px;
+    margin: 40px auto 40px;
+  }
+}
+
+@media (min-width: 835px) {
+  .nav-lists {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 1.15em;
+    line-height: unset;
+    margin: unset;
+    font-weight: unset;
+  }
+  .nav-bar{
+    display: grid;
+    grid-template-columns: 2.5% 89% 8.5%;
+    width: 97%;
+  }
+  .nav-lists li a{
+    padding: 5px;
+  }
+  .nav-lists li a:hover{
+    background-color: rgb(77, 73, 73);
+  }
+  .other-links{
+    font-size: 1.15rem;
+    border: unset;
+    display: flex;
+    justify-content: space-evenly;
+    border-top: 1px solid rgb(215, 213, 213);
+    padding-top: 10px;
+  }
+  .other-links > div{
+    width: 140px;
+  }
+  .ol-items-collection{
+    margin: 10px 0 0;
+  }
+  .ol-items-collection div:not(:first-of-type){
+    margin: 5px 0 0;
+  }
+  .other-links>div:not(:first-of-type){
+    border: unset;
+  }
+  .ol-drop-down p{
+    font-weight: bold;
+  }
+  .drop-down-items{
+    width: fit-content;
+  }
+  .drop-down-items:hover, .final > div span:hover{
+    cursor: pointer;
+  }
+  .ol-new-div > :not(:first-child){
+    margin-top: 20px;
+  }
+  .final p:nth-of-type(2){
+    float: right;
+  }
+  .final p:nth-of-type(1){
+    border-bottom: 1px solid rgb(215, 213, 213);
+    padding-bottom: 15px;
+    margin-bottom: 10px;
+  }
+  .final > div{
+    width: 55%;
+  }
+  .tc{
+    padding: 15px 30px;
+  }
+  .more-stuff{
+    height: fit-content;
+  }
+  .mspic{
+    width: 290px;
+  }
+  .mspic img {
+    height: 170px;
+    width: 290px;
+  }
+}
+
+@media (min-width: 1070px){
+  .nav-bar{
+    grid-template-columns: 2.5% 86% 8.5%;
+    width: 80%;
+  }
+  .phpro-pic{
+    background: unset;
+  }
+  img[alt|="iPhone16Pro"] {
+    width: 100%;
+    height: 250px;
+  }
+  .ph-pic img {
+    height: unset;
+    width: 100%;
+    display: block;
+    margin: 75px auto 20px;
+  }
+  .trading {
+    background: #f5f5f7;
+  }
+  .td-pic img, .op-pic img {
+    height: 250px;
+  }
+  .wh-pic img{
+    height: 200px;
+  }
+  img[alt|="MasterCard"] {
+    height: 300px;
+  }
+  .contain .above-title h2{
+    font-size: 4.8rem;
+  }
+  .contain .above-title h2 img{
+    height: 45px;
+  }
+  .tvpic img{
+    height: 500px;
+  }
+  .mspic{
+    width: 450px;
+  }
+  .mspic img {
+    height: 250px;
+    width: 450px;
+  }
+  .tc {
+    padding: 30px 5%;
+  }
+  .other-links {
+    margin: 10px 4%;
+  }
+  .final {
+    margin: 10px 3%;
+  }
+  .final > p:last-of-type{
+      float: left;
+      margin: 12px 5px 12px 0;
+  }
+  .final > div span{
+    margin: 7px 5px 0px 0;
+  } 
+  .final > div {
+    width: 45%;
+  }
+}
+
+@media (min-width: 1440px) {
+  .mbpro-pic img {
+    width: 70%;
+  }
+  .mbair-pic img {
+    width: 55%;
+    height: auto;
+  }
+.pdair-pic img {
+  width: 50%;
+  object-fit: contain;
+  height: 700px;
+  }   
+  .contain .above-title p{
+    font-size: 1.8rem;
+  }
+  .wh-above-title p:first-of-type {
+    font-size: 1.5rem;
+  }
+  .contain .above-buttons :last-child , .contain .above-buttons :first-child, .op-above-buttons button{
+    font-size: 1.7rem;
+  }
+  .tvpic img {
+    height: 750px;
+    width: 100vw;
+  }
+  .td-pic img, .op-pic img {
+    height: 350px;
+    object-fit: contain;
+  }
+  footer {
+    width: 70%;
+    margin: 0 auto;
+  }
+  .other-links{
+    margin: 10px 1% 10px 3%;
+    column-gap: 50px;
+    justify-content: start;
+  }
+  .final > div {
+    width: 45%;
+  }
+  .contain{
+    grid-template-columns: 50% 50%;
+  }
+}
